@@ -31,8 +31,10 @@ namespace Tac_Tac_Toe_Game
 
         private void Tic_Tac_Toe_Game_Load(object sender, EventArgs e)
         {
-            Player1.Text = player1Name;
-            Player2.Text = player2Name;
+            Player1.Text = player1Name + " :";
+            Player2.Text = player2Name + " :";
         }
+
+        
     }
 }
