@@ -32,23 +32,23 @@
             this.Player1 = new System.Windows.Forms.Label();
             this.Player1_Score = new System.Windows.Forms.Label();
             this.Game_Panel = new System.Windows.Forms.Panel();
-            this.A3 = new System.Windows.Forms.Button();
-            this.A2 = new System.Windows.Forms.Button();
-            this.A1 = new System.Windows.Forms.Button();
-            this.B3 = new System.Windows.Forms.Button();
-            this.B2 = new System.Windows.Forms.Button();
-            this.B1 = new System.Windows.Forms.Button();
             this.C3 = new System.Windows.Forms.Button();
             this.C2 = new System.Windows.Forms.Button();
             this.C1 = new System.Windows.Forms.Button();
+            this.B3 = new System.Windows.Forms.Button();
+            this.B2 = new System.Windows.Forms.Button();
+            this.B1 = new System.Windows.Forms.Button();
+            this.A3 = new System.Windows.Forms.Button();
+            this.A2 = new System.Windows.Forms.Button();
+            this.A1 = new System.Windows.Forms.Button();
             this.Score_Panel = new System.Windows.Forms.Panel();
-            this.label = new System.Windows.Forms.Label();
-            this.Player2 = new System.Windows.Forms.Label();
             this.Player2_Score = new System.Windows.Forms.Label();
+            this.Player2 = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
             this.Button_Panel = new System.Windows.Forms.Panel();
-            this.New = new System.Windows.Forms.Button();
-            this.Reset = new System.Windows.Forms.Button();
             this.Close = new System.Windows.Forms.Button();
+            this.Reset = new System.Windows.Forms.Button();
+            this.New = new System.Windows.Forms.Button();
             this.Game_Panel.SuspendLayout();
             this.Score_Panel.SuspendLayout();
             this.Button_Panel.SuspendLayout();
@@ -89,86 +89,104 @@
             this.Game_Panel.Size = new System.Drawing.Size(679, 651);
             this.Game_Panel.TabIndex = 8;
             // 
-            // A3
-            // 
-            this.A3.Font = new System.Drawing.Font("Tahoma", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.A3.Location = new System.Drawing.Point(455, 3);
-            this.A3.Name = "A3";
-            this.A3.Size = new System.Drawing.Size(220, 210);
-            this.A3.TabIndex = 2;
-            this.A3.UseVisualStyleBackColor = true;
-            // 
-            // A2
-            // 
-            this.A2.Font = new System.Drawing.Font("Tahoma", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.A2.Location = new System.Drawing.Point(229, 3);
-            this.A2.Name = "A2";
-            this.A2.Size = new System.Drawing.Size(220, 210);
-            this.A2.TabIndex = 1;
-            this.A2.UseVisualStyleBackColor = true;
-            // 
-            // A1
-            // 
-            this.A1.Font = new System.Drawing.Font("Tahoma", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.A1.Location = new System.Drawing.Point(3, 3);
-            this.A1.Name = "A1";
-            this.A1.Size = new System.Drawing.Size(220, 210);
-            this.A1.TabIndex = 0;
-            this.A1.UseVisualStyleBackColor = true;
-            // 
-            // B3
-            // 
-            this.B3.Font = new System.Drawing.Font("Tahoma", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.B3.Location = new System.Drawing.Point(455, 219);
-            this.B3.Name = "B3";
-            this.B3.Size = new System.Drawing.Size(220, 210);
-            this.B3.TabIndex = 5;
-            this.B3.UseVisualStyleBackColor = true;
-            // 
-            // B2
-            // 
-            this.B2.Font = new System.Drawing.Font("Tahoma", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.B2.Location = new System.Drawing.Point(229, 219);
-            this.B2.Name = "B2";
-            this.B2.Size = new System.Drawing.Size(220, 210);
-            this.B2.TabIndex = 4;
-            this.B2.UseVisualStyleBackColor = true;
-            // 
-            // B1
-            // 
-            this.B1.Font = new System.Drawing.Font("Tahoma", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.B1.Location = new System.Drawing.Point(3, 219);
-            this.B1.Name = "B1";
-            this.B1.Size = new System.Drawing.Size(220, 210);
-            this.B1.TabIndex = 3;
-            this.B1.UseVisualStyleBackColor = true;
-            // 
             // C3
             // 
+            this.C3.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.C3.Font = new System.Drawing.Font("Tahoma", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.C3.Location = new System.Drawing.Point(455, 435);
             this.C3.Name = "C3";
             this.C3.Size = new System.Drawing.Size(220, 210);
             this.C3.TabIndex = 8;
-            this.C3.UseVisualStyleBackColor = true;
+            this.C3.UseVisualStyleBackColor = false;
+            this.C3.Click += new System.EventHandler(this.btnGame_Click);
             // 
             // C2
             // 
+            this.C2.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.C2.Font = new System.Drawing.Font("Tahoma", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.C2.Location = new System.Drawing.Point(229, 435);
             this.C2.Name = "C2";
             this.C2.Size = new System.Drawing.Size(220, 210);
             this.C2.TabIndex = 7;
-            this.C2.UseVisualStyleBackColor = true;
+            this.C2.UseVisualStyleBackColor = false;
+            this.C2.Click += new System.EventHandler(this.btnGame_Click);
             // 
             // C1
             // 
+            this.C1.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.C1.Font = new System.Drawing.Font("Tahoma", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.C1.Location = new System.Drawing.Point(3, 435);
             this.C1.Name = "C1";
             this.C1.Size = new System.Drawing.Size(220, 210);
             this.C1.TabIndex = 6;
-            this.C1.UseVisualStyleBackColor = true;
+            this.C1.UseVisualStyleBackColor = false;
+            this.C1.Click += new System.EventHandler(this.btnGame_Click);
+            // 
+            // B3
+            // 
+            this.B3.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.B3.Font = new System.Drawing.Font("Tahoma", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.B3.Location = new System.Drawing.Point(455, 219);
+            this.B3.Name = "B3";
+            this.B3.Size = new System.Drawing.Size(220, 210);
+            this.B3.TabIndex = 5;
+            this.B3.UseVisualStyleBackColor = false;
+            this.B3.Click += new System.EventHandler(this.btnGame_Click);
+            // 
+            // B2
+            // 
+            this.B2.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.B2.Font = new System.Drawing.Font("Tahoma", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.B2.Location = new System.Drawing.Point(229, 219);
+            this.B2.Name = "B2";
+            this.B2.Size = new System.Drawing.Size(220, 210);
+            this.B2.TabIndex = 4;
+            this.B2.UseVisualStyleBackColor = false;
+            this.B2.Click += new System.EventHandler(this.btnGame_Click);
+            // 
+            // B1
+            // 
+            this.B1.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.B1.Font = new System.Drawing.Font("Tahoma", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.B1.Location = new System.Drawing.Point(3, 219);
+            this.B1.Name = "B1";
+            this.B1.Size = new System.Drawing.Size(220, 210);
+            this.B1.TabIndex = 3;
+            this.B1.UseVisualStyleBackColor = false;
+            this.B1.Click += new System.EventHandler(this.btnGame_Click);
+            // 
+            // A3
+            // 
+            this.A3.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.A3.Font = new System.Drawing.Font("Tahoma", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.A3.Location = new System.Drawing.Point(455, 3);
+            this.A3.Name = "A3";
+            this.A3.Size = new System.Drawing.Size(220, 210);
+            this.A3.TabIndex = 2;
+            this.A3.UseVisualStyleBackColor = false;
+            this.A3.Click += new System.EventHandler(this.btnGame_Click);
+            // 
+            // A2
+            // 
+            this.A2.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.A2.Font = new System.Drawing.Font("Tahoma", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.A2.Location = new System.Drawing.Point(229, 3);
+            this.A2.Name = "A2";
+            this.A2.Size = new System.Drawing.Size(220, 210);
+            this.A2.TabIndex = 1;
+            this.A2.UseVisualStyleBackColor = false;
+            this.A2.Click += new System.EventHandler(this.btnGame_Click);
+            // 
+            // A1
+            // 
+            this.A1.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.A1.Font = new System.Drawing.Font("Tahoma", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.A1.Location = new System.Drawing.Point(3, 3);
+            this.A1.Name = "A1";
+            this.A1.Size = new System.Drawing.Size(220, 210);
+            this.A1.TabIndex = 0;
+            this.A1.UseVisualStyleBackColor = false;
+            this.A1.Click += new System.EventHandler(this.btnGame_Click);
             // 
             // Score_Panel
             // 
@@ -182,14 +200,14 @@
             this.Score_Panel.Size = new System.Drawing.Size(473, 429);
             this.Score_Panel.TabIndex = 9;
             // 
-            // label
+            // Player2_Score
             // 
-            this.label.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label.Location = new System.Drawing.Point(180, 3);
-            this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(116, 38);
-            this.label.TabIndex = 10;
-            this.label.Text = "Scores";
+            this.Player2_Score.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Player2_Score.Location = new System.Drawing.Point(295, 226);
+            this.Player2_Score.Name = "Player2_Score";
+            this.Player2_Score.Size = new System.Drawing.Size(162, 50);
+            this.Player2_Score.TabIndex = 12;
+            this.Player2_Score.Text = "0";
             // 
             // Player2
             // 
@@ -200,14 +218,14 @@
             this.Player2.TabIndex = 11;
             this.Player2.Text = "Player O :";
             // 
-            // Player2_Score
+            // label
             // 
-            this.Player2_Score.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Player2_Score.Location = new System.Drawing.Point(295, 226);
-            this.Player2_Score.Name = "Player2_Score";
-            this.Player2_Score.Size = new System.Drawing.Size(162, 50);
-            this.Player2_Score.TabIndex = 12;
-            this.Player2_Score.Text = "0";
+            this.label.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.Location = new System.Drawing.Point(180, 3);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(116, 38);
+            this.label.TabIndex = 10;
+            this.label.Text = "Scores";
             // 
             // Button_Panel
             // 
@@ -219,15 +237,15 @@
             this.Button_Panel.Size = new System.Drawing.Size(473, 216);
             this.Button_Panel.TabIndex = 10;
             // 
-            // New
+            // Close
             // 
-            this.New.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.New.Location = new System.Drawing.Point(16, 44);
-            this.New.Name = "New";
-            this.New.Size = new System.Drawing.Size(207, 60);
-            this.New.TabIndex = 0;
-            this.New.Text = "New Game";
-            this.New.UseVisualStyleBackColor = true;
+            this.Close.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Close.Location = new System.Drawing.Point(138, 134);
+            this.Close.Name = "Close";
+            this.Close.Size = new System.Drawing.Size(207, 60);
+            this.Close.TabIndex = 2;
+            this.Close.Text = "Close Game";
+            this.Close.UseVisualStyleBackColor = false;
             // 
             // Reset
             // 
@@ -237,22 +255,23 @@
             this.Reset.Size = new System.Drawing.Size(207, 60);
             this.Reset.TabIndex = 1;
             this.Reset.Text = "Reset Game";
-            this.Reset.UseVisualStyleBackColor = true;
+            this.Reset.UseVisualStyleBackColor = false;
             // 
-            // Close
+            // New
             // 
-            this.Close.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Close.Location = new System.Drawing.Point(138, 134);
-            this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(207, 60);
-            this.Close.TabIndex = 2;
-            this.Close.Text = "Close Game";
-            this.Close.UseVisualStyleBackColor = true;
+            this.New.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.New.Location = new System.Drawing.Point(16, 44);
+            this.New.Name = "New";
+            this.New.Size = new System.Drawing.Size(207, 60);
+            this.New.TabIndex = 0;
+            this.New.Text = "New Game";
+            this.New.UseVisualStyleBackColor = false;
             // 
             // Tic_Tac_Toe_Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(1182, 673);
             this.Controls.Add(this.Button_Panel);
             this.Controls.Add(this.Score_Panel);
