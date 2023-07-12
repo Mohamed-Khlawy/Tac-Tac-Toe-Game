@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,9 +15,11 @@ namespace Tac_Tac_Toe_Game
     {
         string player1Name;
         string player2Name;
+        char winner;
         int playerX_Score = 0;
         int playerO_Score = 0;
         int checkCounter = 0;
+        int buttonCounter = 0; //from 0 to 9 if we reach 9, that means (draw) no winner
         bool turn = true; //true => player x turn /// false => player o turn
         bool thereIsWinner = false;
         private char HorizontalCheck()
@@ -60,6 +63,76 @@ namespace Tac_Tac_Toe_Game
             }
             return winner;
         }
+        private char VerticalCheck()
+        {
+            char winner = '.';
+            if (A1.Text == B1.Text && B1.Text == C1.Text && A1.Text != "")
+            {
+                thereIsWinner = true;
+                if (A1.Text == "X")
+                {
+                    winner = 'X';
+                }
+                else
+                {
+                    winner = 'O';
+                }
+            }
+            if (A2.Text == B2.Text && B2.Text == C2.Text && A2.Text != "")
+            {
+                thereIsWinner = true;
+                if (A2.Text == "X")
+                {
+                    winner = 'X';
+                }
+                else
+                {
+                    winner = 'O';
+                }
+            }
+            if (A3.Text == B3.Text && B3.Text == C3.Text && A3.Text != "")
+            {
+                thereIsWinner = true;
+                if (A3.Text == "X")
+                {
+                    winner = 'X';
+                }
+                else
+                {
+                    winner = 'O';
+                }
+            }
+            return winner;
+        }
+        private char DiagonalCheck()
+        {
+            char winner = '.';
+            if (A1.Text == B2.Text && B2.Text == C3.Text && A1.Text != "")
+            {
+                thereIsWinner = true;
+                if (A1.Text == "X")
+                {
+                    winner = 'X';
+                }
+                else
+                {
+                    winner = 'O';
+                }
+            }
+            if (A3.Text == B2.Text && B2.Text == C1.Text && A3.Text != "")
+            {
+                thereIsWinner = true;
+                if (A3.Text == "X")
+                {
+                    winner = 'X';
+                }
+                else
+                {
+                    winner = 'O';
+                }
+            }
+            return winner;
+        }
         public Tic_Tac_Toe_Game(string player1Name_, string player2Name_)
         {
             if (player1Name_ == "")
@@ -82,47 +155,104 @@ namespace Tac_Tac_Toe_Game
 
         private void btnGame_Click(object sender, EventArgs e)
         {
-            checkCounter = 0;
-            Button button = (Button)sender;
-            if (turn)
+            buttonCounter++;
+            if (buttonCounter < 9)
             {
-                button.Text = "X";
-            }
-            else
-            {
-                button.Text = "O";
-            }
-            turn = !turn;
-            button.Enabled = false;
-            while (checkCounter < 3 && !thereIsWinner)
-            {
-                switch(checkCounter)
+                checkCounter = 0;
+                Button button = (Button)sender;
+                if (turn)
                 {
-                    case 0:
-                        char winner = HorizontalCheck();
-                        if (winner != '.')
-                        {
-                            if(winner == 'X')
-                            {
-                                playerX_Score++;
-                                Player1_Score.Text = playerX_Score.ToString();
-                            }
-                            else
-                            {
-                                playerO_Score++;
-                                Player2_Score.Text = playerO_Score.ToString();
-                            }
-                        }
-                        break;
+                    button.Text = "X";
                 }
-                checkCounter++;
-            }
-            if(thereIsWinner)
-            {
-                foreach(Control control in Game_Panel.Controls)
+                else
                 {
-                    control.Enabled = false;
+                    button.Text = "O";
                 }
+                turn = !turn;
+                button.Enabled = false;
+                while (checkCounter < 3 && !thereIsWinner)
+                {
+                    switch (checkCounter)
+                    {
+                        case 0:
+                            winner = HorizontalCheck();
+                            if (winner != '.')
+                            {
+                                if (winner == 'X')
+                                {
+                                    playerX_Score++;
+                                    Player1_Score.Text = playerX_Score.ToString();
+                                }
+                                else
+                                {
+                                    playerO_Score++;
+                                    Player2_Score.Text = playerO_Score.ToString();
+                                }
+                            }
+                            break;
+                        case 1:
+                            winner = VerticalCheck();
+                            if (winner != '.')
+                            {
+                                if (winner == 'X')
+                                {
+                                    playerX_Score++;
+                                    Player1_Score.Text = playerX_Score.ToString();
+                                }
+                                else
+                                {
+                                    playerO_Score++;
+                                    Player2_Score.Text = playerO_Score.ToString();
+                                }
+                            }
+                            break;
+                        case 2:
+                            winner = DiagonalCheck();
+                            if (winner != '.')
+                            {
+                                if (winner == 'X')
+                                {
+                                    playerX_Score++;
+                                    Player1_Score.Text = playerX_Score.ToString();
+                                }
+                                else
+                                {
+                                    playerO_Score++;
+                                    Player2_Score.Text = playerO_Score.ToString();
+                                }
+                            }
+                            break;
+                    }
+                    checkCounter++;
+                }
+                if (thereIsWinner)
+                {
+                    foreach (Control control in Game_Panel.Controls)
+                    {
+                        control.Enabled = false;
+                    }
+                }
+            }
+            else if (buttonCounter == 9)
+            {
+                DialogResult draw = MessageBox.Show("It's a draw! \nDo you want to play another game to break the draw?",
+                     "Tic-Tac-Toe Result", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                if(draw == DialogResult.OK)
+                {
+                    New.PerformClick();
+                }
+            }
+        }
+
+        private void New_Click(object sender, EventArgs e)
+        {
+            buttonCounter = 0;
+            thereIsWinner = false;
+            turn = true;
+            foreach (Control control in Game_Panel.Controls)
+            {
+                control.Text = "";
+                control.Enabled = true;
             }
         }
     }

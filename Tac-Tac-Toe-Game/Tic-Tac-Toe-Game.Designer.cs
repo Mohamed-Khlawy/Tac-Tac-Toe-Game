@@ -266,6 +266,7 @@
             this.New.TabIndex = 0;
             this.New.Text = "New Game";
             this.New.UseVisualStyleBackColor = false;
+            this.New.Click += new System.EventHandler(this.New_Click);
             // 
             // Tic_Tac_Toe_Game
             // 
