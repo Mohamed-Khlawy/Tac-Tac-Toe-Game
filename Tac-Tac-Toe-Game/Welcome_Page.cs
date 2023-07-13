@@ -47,5 +47,10 @@ namespace Tac_Tac_Toe_Game
             Button button = (Button)sender;
             button.BackColor = Color.DeepSkyBlue;
         }
+
+        private void Welcome_Page_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -149,6 +149,7 @@
             this.Name = "Welcome_Page";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome to Tic-Tac-Toe";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Welcome_Page_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
