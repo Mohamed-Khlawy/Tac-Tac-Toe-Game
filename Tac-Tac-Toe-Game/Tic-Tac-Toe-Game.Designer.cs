@@ -246,6 +246,7 @@
             this.Close.TabIndex = 2;
             this.Close.Text = "Close Game";
             this.Close.UseVisualStyleBackColor = false;
+            this.Close.Click += new System.EventHandler(this.Close_Click);
             // 
             // Reset
             // 
@@ -256,6 +257,7 @@
             this.Reset.TabIndex = 1;
             this.Reset.Text = "Reset Game";
             this.Reset.UseVisualStyleBackColor = false;
+            this.Reset.Click += new System.EventHandler(this.Reset_Click);
             // 
             // New
             // 
@@ -284,6 +286,7 @@
             this.Name = "Tic_Tac_Toe_Game";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tic_Tac_Toe_Game";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Tic_Tac_Toe_Game_FormClosing);
             this.Load += new System.EventHandler(this.Tic_Tac_Toe_Game_Load);
             this.Game_Panel.ResumeLayout(false);
             this.Score_Panel.ResumeLayout(false);

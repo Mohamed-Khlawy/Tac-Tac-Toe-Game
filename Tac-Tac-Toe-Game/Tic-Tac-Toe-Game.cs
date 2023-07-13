@@ -231,12 +231,32 @@ namespace Tac_Tac_Toe_Game
                     {
                         control.Enabled = false;
                     }
+                    if (turn)
+                    {
+                        DialogResult win = MessageBox.Show($"Congratulations {player2Name}, You won this game! " +
+                            $"\nCome on {player1Name}, Do you want to play again to win next game?",
+                     "Tic-Tac-Toe Result", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                        if (win == DialogResult.OK)
+                        {
+                            New.PerformClick();
+                        }
+                    }
+                    else if(!turn)
+                    {
+                        DialogResult win = MessageBox.Show($"Congratulations {player1Name}, You won this game! " +
+                            $"\nCome on {player2Name}, Do you want to play again to win next game?",
+                     "Tic-Tac-Toe Result", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                        if (win == DialogResult.OK)
+                        {
+                            New.PerformClick();
+                        }
+                    }
                 }
             }
             else if (buttonCounter == 9)
             {
                 DialogResult draw = MessageBox.Show("It's a draw! \nDo you want to play another game to break the draw?",
-                     "Tic-Tac-Toe Result", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                     "Tic-Tac-Toe Result", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if(draw == DialogResult.OK)
                 {
                     New.PerformClick();
@@ -254,6 +274,37 @@ namespace Tac_Tac_Toe_Game
                 control.Text = "";
                 control.Enabled = true;
             }
+        }
+
+        private void Reset_Click(object sender, EventArgs e)
+        {
+            DialogResult reset = MessageBox.Show("Are you sure you want to reset the scores and the game?",
+                     "Tic-Tac-Toe Result", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (reset == DialogResult.OK)
+            {
+                playerX_Score = 0;
+                playerO_Score = 0;
+                Player1_Score.Text = "0";
+                Player2_Score.Text = "0";
+                New.PerformClick();
+            }
+        }
+
+        private void Close_Click(object sender, EventArgs e)
+        {
+            DialogResult close = MessageBox.Show("Are you sure you want to close the game and back to welcome page?",
+                     "Tic-Tac-Toe Result", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (close == DialogResult.OK)
+            {
+                Welcome_Page welcome_Page = new Welcome_Page();
+                welcome_Page.Show();
+                this.Hide();
+            }
+        }
+
+        private void Tic_Tac_Toe_Game_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Close.PerformClick();
         }
     }
 }
