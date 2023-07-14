@@ -31,10 +31,16 @@ namespace Tac_Tac_Toe_Game
                 if (A1.Text == "X")
                 {
                     winner = 'X';
+                    A1.BackColor = Color.RoyalBlue;
+                    A2.BackColor = Color.RoyalBlue;
+                    A3.BackColor = Color.RoyalBlue;
                 }
                 else
                 {
                     winner = 'O';
+                    A1.BackColor = Color.Brown;
+                    A2.BackColor = Color.Brown;
+                    A3.BackColor = Color.Brown;
                 }
             }
             if (B1.Text == B2.Text && B2.Text == B3.Text && B1.Text != "")
@@ -43,10 +49,16 @@ namespace Tac_Tac_Toe_Game
                 if (B1.Text == "X")
                 {
                     winner = 'X';
+                    B1.BackColor = Color.RoyalBlue;
+                    B2.BackColor = Color.RoyalBlue;
+                    B3.BackColor = Color.RoyalBlue;
                 }
                 else
                 {
                     winner = 'O';
+                    B1.BackColor = Color.Brown;
+                    B2.BackColor = Color.Brown;
+                    B3.BackColor = Color.Brown;
                 }
             }
             if (C1.Text == C2.Text && C2.Text == C3.Text && C1.Text != "")
@@ -55,10 +67,16 @@ namespace Tac_Tac_Toe_Game
                 if (C1.Text == "X")
                 {
                     winner = 'X';
+                    C1.BackColor = Color.RoyalBlue;
+                    C2.BackColor = Color.RoyalBlue;
+                    C3.BackColor = Color.RoyalBlue;
                 }
                 else
                 {
                     winner = 'O';
+                    C1.BackColor = Color.Brown;
+                    C2.BackColor = Color.Brown;
+                    C3.BackColor = Color.Brown;
                 }
             }
             return winner;
@@ -72,10 +90,16 @@ namespace Tac_Tac_Toe_Game
                 if (A1.Text == "X")
                 {
                     winner = 'X';
+                    A1.BackColor = Color.RoyalBlue;
+                    B1.BackColor = Color.RoyalBlue;
+                    C1.BackColor = Color.RoyalBlue;
                 }
                 else
                 {
                     winner = 'O';
+                    A1.BackColor = Color.Brown;
+                    B1.BackColor = Color.Brown;
+                    C1.BackColor = Color.Brown;
                 }
             }
             if (A2.Text == B2.Text && B2.Text == C2.Text && A2.Text != "")
@@ -84,10 +108,16 @@ namespace Tac_Tac_Toe_Game
                 if (A2.Text == "X")
                 {
                     winner = 'X';
+                    A2.BackColor = Color.RoyalBlue;
+                    B2.BackColor = Color.RoyalBlue;
+                    C2.BackColor = Color.RoyalBlue;
                 }
                 else
                 {
                     winner = 'O';
+                    A2.BackColor = Color.Brown;
+                    B2.BackColor = Color.Brown;
+                    C2.BackColor = Color.Brown;
                 }
             }
             if (A3.Text == B3.Text && B3.Text == C3.Text && A3.Text != "")
@@ -96,10 +126,16 @@ namespace Tac_Tac_Toe_Game
                 if (A3.Text == "X")
                 {
                     winner = 'X';
+                    A3.BackColor = Color.RoyalBlue;
+                    B3.BackColor = Color.RoyalBlue;
+                    C3.BackColor = Color.RoyalBlue;
                 }
                 else
                 {
                     winner = 'O';
+                    A3.BackColor = Color.Brown;
+                    B3.BackColor = Color.Brown;
+                    C3.BackColor = Color.Brown;
                 }
             }
             return winner;
@@ -113,10 +149,16 @@ namespace Tac_Tac_Toe_Game
                 if (A1.Text == "X")
                 {
                     winner = 'X';
+                    A1.BackColor = Color.RoyalBlue;
+                    B2.BackColor = Color.RoyalBlue;
+                    C3.BackColor = Color.RoyalBlue;
                 }
                 else
                 {
                     winner = 'O';
+                    A1.BackColor = Color.Brown;
+                    B2.BackColor = Color.Brown;
+                    C3.BackColor = Color.Brown;
                 }
             }
             if (A3.Text == B2.Text && B2.Text == C1.Text && A3.Text != "")
@@ -125,10 +167,16 @@ namespace Tac_Tac_Toe_Game
                 if (A3.Text == "X")
                 {
                     winner = 'X';
+                    A3.BackColor = Color.RoyalBlue;
+                    B2.BackColor = Color.RoyalBlue;
+                    C1.BackColor = Color.RoyalBlue;
                 }
                 else
                 {
                     winner = 'O';
+                    A3.BackColor = Color.Brown;
+                    B2.BackColor = Color.Brown;
+                    C1.BackColor = Color.Brown;
                 }
             }
             return winner;
@@ -273,6 +321,7 @@ namespace Tac_Tac_Toe_Game
             {
                 control.Text = "";
                 control.Enabled = true;
+                control.BackColor = Color.DeepSkyBlue;
             }
         }
 
