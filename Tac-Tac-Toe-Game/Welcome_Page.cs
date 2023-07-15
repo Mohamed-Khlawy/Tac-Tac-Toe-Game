@@ -25,6 +25,14 @@ namespace Tac_Tac_Toe_Game
             tic_Tac_Toe.Show();
             this.Hide();
         }
+        private void btn_AI_version_Click(object sender, EventArgs e)
+        {
+            string player1Name = Player1.Text;
+            string player2Name = Player2.Text;
+            AI_Version aI_Version = new AI_Version(player1Name, player2Name);
+            aI_Version.Show();
+            this.Hide();
+        }
 
         private void Close_Click(object sender, EventArgs e)
         {

@@ -37,6 +37,7 @@
             this.Player2 = new System.Windows.Forms.TextBox();
             this.Start = new System.Windows.Forms.Button();
             this.Close = new System.Windows.Forms.Button();
+            this.btn_AI_version = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -102,13 +103,13 @@
             // Start
             // 
             this.Start.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.Start.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Start.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Start.ForeColor = System.Drawing.Color.White;
-            this.Start.Location = new System.Drawing.Point(136, 365);
+            this.Start.Location = new System.Drawing.Point(12, 374);
             this.Start.Name = "Start";
-            this.Start.Size = new System.Drawing.Size(214, 61);
+            this.Start.Size = new System.Drawing.Size(214, 67);
             this.Start.TabIndex = 9;
-            this.Start.Text = "Start Game";
+            this.Start.Text = "Start Game With 2 Players";
             this.Start.UseVisualStyleBackColor = false;
             this.Start.Click += new System.EventHandler(this.Start_Click);
             this.Start.MouseEnter += new System.EventHandler(this.Start_MouseEnter);
@@ -119,7 +120,7 @@
             this.Close.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.Close.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Close.ForeColor = System.Drawing.Color.White;
-            this.Close.Location = new System.Drawing.Point(453, 365);
+            this.Close.Location = new System.Drawing.Point(576, 380);
             this.Close.Name = "Close";
             this.Close.Size = new System.Drawing.Size(214, 61);
             this.Close.TabIndex = 10;
@@ -129,12 +130,28 @@
             this.Close.MouseEnter += new System.EventHandler(this.Start_MouseEnter);
             this.Close.MouseLeave += new System.EventHandler(this.Start_MouseLeave);
             // 
+            // btn_AI_version
+            // 
+            this.btn_AI_version.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_AI_version.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AI_version.ForeColor = System.Drawing.Color.White;
+            this.btn_AI_version.Location = new System.Drawing.Point(232, 374);
+            this.btn_AI_version.Name = "btn_AI_version";
+            this.btn_AI_version.Size = new System.Drawing.Size(214, 67);
+            this.btn_AI_version.TabIndex = 11;
+            this.btn_AI_version.Text = "Start Game Against AI";
+            this.btn_AI_version.UseVisualStyleBackColor = false;
+            this.btn_AI_version.Click += new System.EventHandler(this.btn_AI_version_Click);
+            this.btn_AI_version.MouseEnter += new System.EventHandler(this.Start_MouseEnter);
+            this.btn_AI_version.MouseLeave += new System.EventHandler(this.Start_MouseLeave);
+            // 
             // Welcome_Page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(802, 453);
+            this.Controls.Add(this.btn_AI_version);
             this.Controls.Add(this.Close);
             this.Controls.Add(this.Start);
             this.Controls.Add(this.Player2);
@@ -165,6 +182,7 @@
         private System.Windows.Forms.TextBox Player2;
         private System.Windows.Forms.Button Start;
         private System.Windows.Forms.Button Close;
+        private System.Windows.Forms.Button btn_AI_version;
     }
 }
 

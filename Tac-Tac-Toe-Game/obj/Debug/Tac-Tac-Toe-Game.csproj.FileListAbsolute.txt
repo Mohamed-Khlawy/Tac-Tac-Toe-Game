@@ -10,3 +10,4 @@ G:\.NET\Projects\Tac-Tac-Toe-Game\Tac-Tac-Toe-Game\obj\Debug\Tac-Tac-Toe-Game.cs
 G:\.NET\Projects\Tac-Tac-Toe-Game\Tac-Tac-Toe-Game\obj\Debug\Tac-Tac-Toe-Game.exe
 G:\.NET\Projects\Tac-Tac-Toe-Game\Tac-Tac-Toe-Game\obj\Debug\Tac-Tac-Toe-Game.pdb
 G:\.NET\Projects\Tac-Tac-Toe-Game\Tac-Tac-Toe-Game\obj\Debug\Tac_Tac_Toe_Game.Tic_Tac_Toe_Game.resources
+G:\.NET\Projects\Tac-Tac-Toe-Game\Tac-Tac-Toe-Game\obj\Debug\Tac_Tac_Toe_Game.AI_Version.resources
