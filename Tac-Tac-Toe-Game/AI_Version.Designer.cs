@@ -49,7 +49,6 @@
             this.Player1_Score = new System.Windows.Forms.Label();
             this.Score_Panel = new System.Windows.Forms.Panel();
             this.Player1 = new System.Windows.Forms.Label();
-            this.turn_ = new System.Windows.Forms.Label();
             this.Button_Panel.SuspendLayout();
             this.Game_Panel.SuspendLayout();
             this.Score_Panel.SuspendLayout();
@@ -64,6 +63,7 @@
             this.Close.TabIndex = 2;
             this.Close.Text = "Close Game";
             this.Close.UseVisualStyleBackColor = false;
+            this.Close.Click += new System.EventHandler(this.Close_Click);
             // 
             // New
             // 
@@ -74,6 +74,7 @@
             this.New.TabIndex = 0;
             this.New.Text = "New Game";
             this.New.UseVisualStyleBackColor = false;
+            this.New.Click += new System.EventHandler(this.New_Click);
             // 
             // Button_Panel
             // 
@@ -94,6 +95,7 @@
             this.Reset.TabIndex = 1;
             this.Reset.Text = "Reset Game";
             this.Reset.UseVisualStyleBackColor = false;
+            this.Reset.Click += new System.EventHandler(this.Reset_Click);
             // 
             // C3
             // 
@@ -249,7 +251,6 @@
             // 
             // Score_Panel
             // 
-            this.Score_Panel.Controls.Add(this.turn_);
             this.Score_Panel.Controls.Add(this.Player2_Score);
             this.Score_Panel.Controls.Add(this.Player2);
             this.Score_Panel.Controls.Add(this.label);
@@ -269,15 +270,6 @@
             this.Player1.TabIndex = 6;
             this.Player1.Text = "Player X :";
             // 
-            // turn_
-            // 
-            this.turn_.Font = new System.Drawing.Font("Tahoma", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.turn_.Location = new System.Drawing.Point(110, 350);
-            this.turn_.Name = "turn_";
-            this.turn_.Size = new System.Drawing.Size(270, 60);
-            this.turn_.TabIndex = 14;
-            this.turn_.Text = " ";
-            // 
             // AI_Version
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -293,6 +285,7 @@
             this.Name = "AI_Version";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tic_Tac_Toe_AI Version";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Tic_Tac_Toe_Game_FormClosing);
             this.Load += new System.EventHandler(this.AI_Version_Load);
             this.Button_Panel.ResumeLayout(false);
             this.Game_Panel.ResumeLayout(false);
@@ -323,6 +316,5 @@
         private System.Windows.Forms.Label Player1_Score;
         private System.Windows.Forms.Panel Score_Panel;
         private System.Windows.Forms.Label Player1;
-        private System.Windows.Forms.Label turn_;
     }
 }

@@ -19,9 +19,9 @@ namespace Tac_Tac_Toe_Game
         int playerX_Score = 0;
         int playerO_Score = 0;
         int checkCounter = 0;
-        int buttonCounter = 0; //from 0 to 9 if we reach 9, that means (draw) no winner
         bool turn = true; //true => player x turn /// false => player o turn
         bool thereIsWinner = false;
+        List<Button> GameButtons = new List<Button>();
         private char HorizontalCheck()
         {
             char winner = '.';
@@ -181,6 +181,20 @@ namespace Tac_Tac_Toe_Game
             }
             return winner;
         }
+        private void CreateButtonList()
+        {
+            GameButtons.Clear();
+
+            GameButtons.Add(A1);
+            GameButtons.Add(A2);
+            GameButtons.Add(A3);
+            GameButtons.Add(B1);
+            GameButtons.Add(B2);
+            GameButtons.Add(B3);
+            GameButtons.Add(C1);
+            GameButtons.Add(C2);
+            GameButtons.Add(C3);
+        }
         public Tic_Tac_Toe_Game(string player1Name_, string player2Name_)
         {
             if (player1Name_ == "")
@@ -200,115 +214,113 @@ namespace Tac_Tac_Toe_Game
             Player1.Text = player1Name + " :";
             Player2.Text = player2Name + " :";
             turn_.Text = $"{player1Name} Turn";
+            CreateButtonList();
         }
 
         private void btnGame_Click(object sender, EventArgs e)
         {
-            buttonCounter++;
-            if (buttonCounter < 9)
+            checkCounter = 0;
+            Button button = (Button)sender;
+            if (turn)
             {
-                checkCounter = 0;
-                Button button = (Button)sender;
+                turn_.Text = $"{player2Name} Turn";
+                button.Text = "X";
+            }
+            else
+            {
+                turn_.Text = $"{player1Name} Turn";
+                button.Text = "O";
+            }
+            turn = !turn;
+            button.Enabled = false;
+            GameButtons.Remove(button);
+            while (checkCounter < 3 && !thereIsWinner)
+            {
+                switch (checkCounter)
+                {
+                    case 0:
+                        winner = HorizontalCheck();
+                        if (winner != '.')
+                        {
+                            if (winner == 'X')
+                            {
+                                playerX_Score++;
+                                Player1_Score.Text = playerX_Score.ToString();
+                            }
+                            else
+                            {
+                                playerO_Score++;
+                                Player2_Score.Text = playerO_Score.ToString();
+                            }
+                        }
+                        break;
+                    case 1:
+                        winner = VerticalCheck();
+                        if (winner != '.')
+                        {
+                            if (winner == 'X')
+                            {
+                                playerX_Score++;
+                                Player1_Score.Text = playerX_Score.ToString();
+                            }
+                            else
+                            {
+                                playerO_Score++;
+                                Player2_Score.Text = playerO_Score.ToString();
+                            }
+                        }
+                        break;
+                    case 2:
+                        winner = DiagonalCheck();
+                        if (winner != '.')
+                        {
+                            if (winner == 'X')
+                            {
+                                playerX_Score++;
+                                Player1_Score.Text = playerX_Score.ToString();
+                            }
+                            else
+                            {
+                                playerO_Score++;
+                                Player2_Score.Text = playerO_Score.ToString();
+                            }
+                        }
+                        break;
+                }
+                checkCounter++;
+            }
+            if (thereIsWinner)
+            {
+                foreach (Control control in Game_Panel.Controls)
+                {
+                    control.Enabled = false;
+                }
                 if (turn)
                 {
-                    turn_.Text = $"{player2Name} Turn";
-                    button.Text = "X";
-                }
-                else
-                {
-                    turn_.Text = $"{player1Name} Turn";
-                    button.Text = "O";
-                }
-                turn = !turn;
-                button.Enabled = false;
-                while (checkCounter < 3 && !thereIsWinner)
-                {
-                    switch (checkCounter)
+                    DialogResult win = MessageBox.Show($"Congratulations {player2Name}, You won this game! " +
+                        $"\nCome on {player1Name}, Do you want to play again to win next game?",
+                 "Tic-Tac-Toe Result", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    if (win == DialogResult.OK)
                     {
-                        case 0:
-                            winner = HorizontalCheck();
-                            if (winner != '.')
-                            {
-                                if (winner == 'X')
-                                {
-                                    playerX_Score++;
-                                    Player1_Score.Text = playerX_Score.ToString();
-                                }
-                                else
-                                {
-                                    playerO_Score++;
-                                    Player2_Score.Text = playerO_Score.ToString();
-                                }
-                            }
-                            break;
-                        case 1:
-                            winner = VerticalCheck();
-                            if (winner != '.')
-                            {
-                                if (winner == 'X')
-                                {
-                                    playerX_Score++;
-                                    Player1_Score.Text = playerX_Score.ToString();
-                                }
-                                else
-                                {
-                                    playerO_Score++;
-                                    Player2_Score.Text = playerO_Score.ToString();
-                                }
-                            }
-                            break;
-                        case 2:
-                            winner = DiagonalCheck();
-                            if (winner != '.')
-                            {
-                                if (winner == 'X')
-                                {
-                                    playerX_Score++;
-                                    Player1_Score.Text = playerX_Score.ToString();
-                                }
-                                else
-                                {
-                                    playerO_Score++;
-                                    Player2_Score.Text = playerO_Score.ToString();
-                                }
-                            }
-                            break;
+                        New.PerformClick();
                     }
-                    checkCounter++;
                 }
-                if (thereIsWinner)
+                else if (!turn)
                 {
-                    foreach (Control control in Game_Panel.Controls)
+                    DialogResult win = MessageBox.Show($"Congratulations {player1Name}, You won this game! " +
+                        $"\nCome on {player2Name}, Do you want to play again to win next game?",
+                 "Tic-Tac-Toe Result", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    if (win == DialogResult.OK)
                     {
-                        control.Enabled = false;
-                    }
-                    if (turn)
-                    {
-                        DialogResult win = MessageBox.Show($"Congratulations {player2Name}, You won this game! " +
-                            $"\nCome on {player1Name}, Do you want to play again to win next game?",
-                     "Tic-Tac-Toe Result", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                        if (win == DialogResult.OK)
-                        {
-                            New.PerformClick();
-                        }
-                    }
-                    else if(!turn)
-                    {
-                        DialogResult win = MessageBox.Show($"Congratulations {player1Name}, You won this game! " +
-                            $"\nCome on {player2Name}, Do you want to play again to win next game?",
-                     "Tic-Tac-Toe Result", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                        if (win == DialogResult.OK)
-                        {
-                            New.PerformClick();
-                        }
+                        New.PerformClick();
                     }
                 }
             }
-            else if (buttonCounter == 9)
+            if (GameButtons.Count == 0 && !thereIsWinner)
             {
                 DialogResult draw = MessageBox.Show("It's a draw! \nDo you want to play another game to break the draw?",
-                     "Tic-Tac-Toe Result", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                if(draw == DialogResult.OK)
+                 "Tic-Tac-Toe Result", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (draw == DialogResult.OK)
                 {
                     New.PerformClick();
                 }
@@ -317,8 +329,8 @@ namespace Tac_Tac_Toe_Game
 
         private void New_Click(object sender, EventArgs e)
         {
+            CreateButtonList();
             turn_.Text = $"{player1Name} Turn";
-            buttonCounter = 0;
             thereIsWinner = false;
             turn = true;
             foreach (Control control in Game_Panel.Controls)
