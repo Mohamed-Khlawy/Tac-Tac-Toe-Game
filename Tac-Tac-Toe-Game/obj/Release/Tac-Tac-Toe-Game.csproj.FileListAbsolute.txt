@@ -1,0 +1,13 @@
+G:\.NET\Projects\Tac-Tac-Toe-Game\Tac-Tac-Toe-Game\bin\Release\Tac-Tac-Toe-Game.exe.config
+G:\.NET\Projects\Tac-Tac-Toe-Game\Tac-Tac-Toe-Game\bin\Release\Tac-Tac-Toe-Game.exe
+G:\.NET\Projects\Tac-Tac-Toe-Game\Tac-Tac-Toe-Game\bin\Release\Tac-Tac-Toe-Game.pdb
+G:\.NET\Projects\Tac-Tac-Toe-Game\Tac-Tac-Toe-Game\obj\Release\Tac-Tac-Toe-Game.csproj.AssemblyReference.cache
+G:\.NET\Projects\Tac-Tac-Toe-Game\Tac-Tac-Toe-Game\obj\Release\Tac-Tac-Toe-Game.csproj.SuggestedBindingRedirects.cache
+G:\.NET\Projects\Tac-Tac-Toe-Game\Tac-Tac-Toe-Game\obj\Release\Tac_Tac_Toe_Game.AI_Version.resources
+G:\.NET\Projects\Tac-Tac-Toe-Game\Tac-Tac-Toe-Game\obj\Release\Tac_Tac_Toe_Game.Tic_Tac_Toe_Game.resources
+G:\.NET\Projects\Tac-Tac-Toe-Game\Tac-Tac-Toe-Game\obj\Release\Tac_Tac_Toe_Game.Welcome_Page.resources
+G:\.NET\Projects\Tac-Tac-Toe-Game\Tac-Tac-Toe-Game\obj\Release\Tac_Tac_Toe_Game.Properties.Resources.resources
+G:\.NET\Projects\Tac-Tac-Toe-Game\Tac-Tac-Toe-Game\obj\Release\Tac-Tac-Toe-Game.csproj.GenerateResource.cache
+G:\.NET\Projects\Tac-Tac-Toe-Game\Tac-Tac-Toe-Game\obj\Release\Tac-Tac-Toe-Game.csproj.CoreCompileInputs.cache
+G:\.NET\Projects\Tac-Tac-Toe-Game\Tac-Tac-Toe-Game\obj\Release\Tac-Tac-Toe-Game.exe
+G:\.NET\Projects\Tac-Tac-Toe-Game\Tac-Tac-Toe-Game\obj\Release\Tac-Tac-Toe-Game.pdb

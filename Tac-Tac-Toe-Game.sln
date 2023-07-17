@@ -5,16 +5,20 @@ VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tac-Tac-Toe-Game", "Tac-Tac-Toe-Game\Tac-Tac-Toe-Game.csproj", "{D6DB069B-9728-40BB-91AC-C97357D8305F}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup_Tic-Tac-Toe", "Setup_Tic-Tac-Toe\Setup_Tic-Tac-Toe.vdproj", "{67D8F8BC-8579-4953-A96F-46DC6B4909B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D6DB069B-9728-40BB-91AC-C97357D8305F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D6DB069B-9728-40BB-91AC-C97357D8305F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6DB069B-9728-40BB-91AC-C97357D8305F}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{D6DB069B-9728-40BB-91AC-C97357D8305F}.Debug|Any CPU.Build.0 = Release|Any CPU
 		{D6DB069B-9728-40BB-91AC-C97357D8305F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6DB069B-9728-40BB-91AC-C97357D8305F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67D8F8BC-8579-4953-A96F-46DC6B4909B0}.Debug|Any CPU.ActiveCfg = Debug
+		{67D8F8BC-8579-4953-A96F-46DC6B4909B0}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
